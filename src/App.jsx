@@ -32,7 +32,11 @@ export default function App() {
         <h2>Episodes</h2>
         <ol>
           {episodes.map((episode) => (
-            <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
+            <li
+              key={episode.id}
+              onClick={() => setSelectedEpisode(episode)}
+              className={episode.id === selectedEpisode?.id ? "selected" : " "}
+            >
               {episode.title}
             </li>
           ))}
